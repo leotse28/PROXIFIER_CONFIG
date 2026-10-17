@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="102" platform="Windows" product_id="0" product_minver="400">
+	<Options>
+		<Resolve>
+			<AutoModeDetection enabled="false" />
+			<ViaProxy enabled="false" />
+			<BlockNonATypes enabled="false" />
+			<ExclusionList OnlyFromListMode="false">%ComputerName%; localhost; *.local</ExclusionList>
+			<DnsUdpMode>0</DnsUdpMode>
+		</Resolve>
+		<Encryption mode="basic" />
+		<ConnectionLoopDetection enabled="true" resolve="true" />
+		<Udp mode="mode_bypass" />
+		<LeakPreventionMode enabled="false" />
+		<ProcessOtherUsers enabled="false" />
+		<ProcessServices enabled="false" />
+		<HandleDirectConnections enabled="false" />
+		<HttpProxiesSupport enabled="false" />
+	</Options>
+	<ProxyList>
+		<Proxy id="101" type="SOCKS5">
+			<Options>48</Options>
+			<Port>2080</Port>
+			<Address>127.0.0.1</Address>
+		</Proxy>
+	</ProxyList>
+	<ChainList />
+	<RuleList>
+		<Rule enabled="false">
+			<Action type="Proxy">101</Action>
+			<Applications>"D:\_Apsofts\Cent5\chrome.exe"</Applications>
+			<Name>cent5</Name>
+		</Rule>
+		<Rule enabled="false">
+			<Action type="Proxy">101</Action>
+			<Applications>D:\_Apsofts\Centbrowser\chrome.exe</Applications>
+			<Name>cent4</Name>
+		</Rule>
+		<Rule enabled="false">
+			<Action type="Proxy">101</Action>
+			<Applications>"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+"C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
+"C:\Program Files (x86)\Microsoft\Edge Beta\Application\msedge.exe"</Applications>
+			<Name>Edge</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>"internet download manager.exe"; idman.exe; idmintegrator64.exe; idmmsghost.exe; mediumilstart.exe</Applications>
+			<Name>idm</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>LdVBoxHeadless.exe </Applications>
+			<Name>雷电P</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>thunder.exe; syspin.exe; thundercmd.exe; thunderfw.exe; thunderrepair.exe; installxlguard.exe; installxlwfp.exe; win7appid.exe; DownloadSDKServer.exe; xl_ext_chrome.exe; XMP.exe</Applications>
+			<Name>迅雷</Name>
+		</Rule>
+		<Rule enabled="false">
+			<Action type="Proxy">101</Action>
+			<Applications>zotero.exe; plugin-hang-ui.exe; pingsender.exe; plugin-container.exe;</Applications>
+			<Name>zotero</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>天若ocr文字识别.exe</Applications>
+			<Name>天若ocr文字识别</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>onenote.exe; onenotem.exe; msouc.exe; clview.exe; msosync.exe</Applications>
+			<Name>onenote</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>telegram.exe</Applications>
+			<Name>telegram</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>rustdesk.exe</Applications>
+			<Name>rustdesk</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>vedetector.exe; capcut.exe</Applications>
+			<Name>capcut</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>antigravity.exe; language_server.exe</Applications>
+			<Name>antigravity</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">101</Action>
+			<Applications>python.exe; git-remote-https.exe; cmd.exe; dsaservice.exe; node.exe; winget.exe; curl.exe; codex.exe; powershell.exe; ollamaapp.exe; ollama.exe;  "lm studio.exe";</Applications>
+			<Name>py comfyui</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Direct" />
+			<Name>Default</Name>
+		</Rule>
+	</RuleList>
+</ProxifierProfile>
